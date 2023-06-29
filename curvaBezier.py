@@ -4,8 +4,8 @@ import numpy as np
 # Define os pontos de controle
 P0 = np.array([0, 0])
 P1 = np.array([1, 1])
-P2 = np.array([2, 0])
-P3 = np.array([3, 1])
+P2 = np.array([1, 0])
+P3 = np.array([2, 1])
 
 # Define a função para calcular a curva cúbica de Bézier
 def bezierCubico(t, P0, P1, P2, P3):
