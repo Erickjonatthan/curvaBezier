@@ -9,7 +9,11 @@ P3 = np.array([2, 1])
 
 # Define a função para calcular a curva cúbica de Bézier
 def bezierCubico(t, P0, P1, P2, P3):
-    return np.outer((1-t)**3, P0) + 3*np.outer(t*(1-t)**2, P1) + 3*np.outer(t**2*(1-t), P2) + np.outer(t**3, P3)
+
+    #Define a expressão genérica da curva de cúbica de Bézier usando o triângulo de Pascal
+    expressao = np.outer((1-t)**3, P0) + 3*np.outer(t*(1-t)**2, P1) + 3*np.outer(t**2*(1-t), P2) + np.outer(t**3, P3)
+    
+    return expressao
 
 # Calcula os valores de x e y para cada valor de t no intervalo [0, 1]
 t = np.linspace(0, 1, num=100)
